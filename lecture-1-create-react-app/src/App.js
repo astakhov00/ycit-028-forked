@@ -3,27 +3,16 @@ import { useState } from "react"
 export function App() {
     const [count, setCount] = useState(0)
 
-    function clickHandler() {
-        setCount(count + 1)
-    }
-
-    function resetHandler() {
-        setCount(0)
-    }
-
-    function decrementHandler() {
-        setCount(count - 1)
+    function handleClick() {
+        const newCount = count + 1
+        setCount(newCount)
     }
 
     return (
         <div>
-            Hello World!
+            Hello World
             <div>
-                <button onClick={clickHandler}>Click to increase</button>
-                <div>{count}</div>
-                <button onClick={resetHandler}>Reset</button>
-                <div>{count}</div>
-                <button onClick={decrementHandler}>Click to decrease</button>
+                <button onClick={handleClick}>Click to increase</button>
                 <div>{count}</div>
             </div>
         </div>
